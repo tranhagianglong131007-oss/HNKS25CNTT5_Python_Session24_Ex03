@@ -28,13 +28,13 @@ class MemberCard:
         print(f"Tổng điểm hiện tại: {self.__points}")
         if self.__points >= 100 and self.__tier == "Standard":
             self.__tier = "VIP"
-            print("\nChúc mừng! Khách hàng đã được nâng hạng lên VIP.")
+            print("Chúc mừng! Khách hàng đã được nâng hạng lên VIP.")
         print(f"Hạng thẻ hiện tại: {self.__tier}")
 
     # Instance Method: Đổi điểm
     def redeem_points(self, points_to_use):
         if points_to_use <= 0 or points_to_use > self.__points:
-            print("\nKhông thể đổi điểm!")
+            print("Không thể đổi điểm!")
             print("Số điểm muốn sử dụng vượt quá số điểm hiện có.")
             print(f"Điểm hiện tại của khách: {self.__points}")
             print("Điểm cũ được giữ nguyên:")
@@ -72,7 +72,7 @@ cards_database[0]._MemberCard__tier = "VIP"
 cards_database[1]._MemberCard__points = 20
 
 while True:
-    print("\n===== HỆ THỐNG THẺ THÀNH VIÊN RIKKEI COFFEE =====")
+    print("===== HỆ THỐNG THẺ THÀNH VIÊN RIKKEI COFFEE =====")
     print("1. Xem danh sách thẻ thành viên")
     print("2. Đăng ký thẻ mới")
     print("3. Khách mua hàng (Tích điểm)")
@@ -85,9 +85,9 @@ while True:
 
     match choice:
         case "1":
-            print("\n--- DANH SÁCH THẺ THÀNH VIÊN ---")
+            print("--- DANH SÁCH THẺ THÀNH VIÊN ---")
             for i, card in enumerate(cards_database, 1):
-                print(f"{i}. Mã: {card.card_id} | Tên: {card.name:<15} | Điểm: {card.points} | Hạng: {card.tier}")
+                print(f"{i}. Mã: {card.card_id} | Tên: {card.name} | Điểm: {card.points} | Hạng: {card.tier}")
 
         case "2":
             print("\n--- ĐĂNG KÝ THẺ THÀNH VIÊN MỚI ---")
